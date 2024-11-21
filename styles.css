@@ -3,7 +3,12 @@ html{
     color: honeydew;
     font-size: 16px;
     font-family: Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+
 
 h1{
     font-size: 40px;
@@ -13,6 +18,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin: 10px 50px;
     padding: 10px;
 }
@@ -20,14 +26,24 @@ h1{
 #container{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
+}
+
+#buttonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:baseline;
+
 }
 
 #sentence{
     background-color: white;
     color: #0a0a2a;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 p{
