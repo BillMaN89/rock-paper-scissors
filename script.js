@@ -2,28 +2,32 @@
 console.log('Hello BillMaN!')
 
 //variable declaration
+const choices = ['rock', 'paper', 'scissors'];
 let humanChoice = '';
 let humanScore = 0;
 let computerScore = 0;
 
 
 function getComputerChoice(){
-    const choices = ['rock', 'paper', 'scissors'];
     return choices[(Math.floor(Math.random() * choices.length))];
 }
 //console.log(getComputerChoice());
 
 
 function getHumanChoice(){
-    return prompt("Player, please enter your choice: ").toLowerCase();
+    do{
+     humanChoice = prompt("Player, please enter your choice: ").toLowerCase();
+     if (!choices.includes(humanChoice)){
+        alert("Incalid choice. Please enter 'rock','paper', or 'scissors' to continue. ");
+     }
+    } while (!choices.includes(humanChoice));
+
+    return humanChoice;
 }
 //console.log(getHumanChoice());
 
 
 function playRound(humanChoice, compChoice){
-    // if ((humanChoice !== "rock") || (humanChoice !== "paper") || (humanChoice !== "scissors")) {
-    //     return console.log("Please enter a valid choice");
-    // }
     if (humanChoice === "paper"){
         if (compChoice === "rock"){
             console.log("You win! Paper beats Rock!");
@@ -61,4 +65,5 @@ function playRound(humanChoice, compChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+console.log(`You chose ${humanSelection}. The computer chose ${computerSelection}.`);
 playRound(humanSelection, computerSelection);
