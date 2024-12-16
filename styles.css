@@ -1,10 +1,10 @@
 html{
-    background-color: #0a0a23;
+    background-color: #5a5ab7;
     color: honeydew;
     font-size: 16px;
     font-family: Verdana, sans-serif;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
 }
@@ -14,20 +14,19 @@ h1{
     font-size: 40px;
 }
 
+#image{
+    margin-left: 150px;
+}
 #headContainer{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     margin: 10px 50px;
     padding: 10px;
 }
 
 #container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
     padding: 10px;
 }
@@ -35,18 +34,20 @@ h1{
 #buttonContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:space-around;
     align-items:baseline;
 
 }
 
 #sentence{
-    background-color: white;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.735);
     color: #0a0a2a;
     font-size: 20px;
+    text-align: center;
 }
 
 p{
-    margin: 10px;
-    padding: 16px;
+    /* margin: 10px; */
+    /* padding: 16px; */
 }

@@ -5,8 +5,8 @@ console.log('Hello Player!')
 const choices = ['rock', 'paper', 'scissors'];
 let humanChoice = '';
 
-const startButton = document.getElementById("startButton");
-startButton.addEventListener("click", playGame);
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", alertFunction);
 
 
 function getComputerChoice(){
@@ -34,14 +34,15 @@ function playGame(){
     let ties = 0;
     let round = 1;
 
-    for (round = 1; round <= 5; round++){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    // for (round = 1; round <= 5; round++){
+    //     const humanSelection = getHumanChoice();
+    //     const computerSelection = getComputerChoice();
 
-        console.log(`You chose ${humanSelection}.\nThe computer chose ${computerSelection}.`);
-        playRound(humanSelection, computerSelection);
-        console.log(`The score so far is:\n  Player: ${humanScore}\n  Computer: ${computerScore}\n  Ties: ${ties}`)
-    }
+    //     console.log(`You chose ${humanSelection}.\nThe computer chose ${computerSelection}.`);
+    //     playRound(humanSelection, computerSelection);
+    //     console.log(`The score so far is:\n  Player: ${humanScore}\n  Computer: ${computerScore}\n  Ties: ${ties}`)
+    // }
+
     //round function  
     function playRound(humanChoice, compChoice){
         if (humanChoice === "paper"){
